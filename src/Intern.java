@@ -7,7 +7,7 @@ public class Intern extends  Employee {
     }
 
     @Override
-    public void setSalary(int salary) {
+    public void setSalary(int salary) throws IllegalArgumentException {
         if (salary <= SALARY_LIMIT) super.setSalary(salary);
         else throw new IllegalArgumentException("salary must not exceed " + SALARY_LIMIT);
     }
