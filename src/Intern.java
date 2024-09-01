@@ -5,4 +5,10 @@ public class Intern extends  Employee {
     public Intern(String name, String email, int age, int salary) {
         super(name, email, age, salary);
     }
+
+    @Override
+    public void setSalary(int salary) {
+        if (salary <= SALARY_LIMIT) super.setSalary(salary);
+        else throw new IllegalArgumentException("salary must not exceed " + SALARY_LIMIT);
+    }
 }

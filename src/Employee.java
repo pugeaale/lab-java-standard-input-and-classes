@@ -6,10 +6,10 @@ public class Employee {
     private int salary;
 
     public Employee(String name, String email, int age, int salary) {
-        this.name = name;
-        this.email = email;
-        this.age = age;
-        this.salary = salary;
+        setSalary(salary);
+        setName(name);
+        setEmail(email);
+        setAge(age);
     }
 
     public String getName() {
