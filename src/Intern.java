@@ -11,4 +11,9 @@ public class Intern extends  Employee {
         if (salary <= SALARY_LIMIT) super.setSalary(salary);
         else throw new IllegalArgumentException("salary must not exceed " + SALARY_LIMIT);
     }
+
+    @Override
+    public String toString() {
+        return super.toString().replace("Employee" , "Intern");
+    }
 }
